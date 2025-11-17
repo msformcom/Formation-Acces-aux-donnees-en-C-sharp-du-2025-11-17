@@ -1,0 +1,7 @@
+Se connecter auc machines virtuelles : https://lab.ib-formation.fr/#/
+
+Identifiant : 25116183
+Mot de passe : Ibformation!
+
+
+Puis, une fois devant l'écran de connection de la machine : Mot de passe Windows : Pa55w.rd
