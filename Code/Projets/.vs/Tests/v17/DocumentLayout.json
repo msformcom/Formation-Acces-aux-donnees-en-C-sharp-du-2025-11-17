@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\tests\\adotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests.csproj|solutionrelative:tests\\adotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\tests\\appsettings.json||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests.csproj|solutionrelative:tests\\appsettings.json||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\tests\\di.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests.csproj|solutionrelative:tests\\di.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdoTests.cs",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\AdoTests.cs",
+              "RelativeDocumentMoniker": "Tests\\AdoTests.cs",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\AdoTests.cs",
+              "RelativeToolTip": "Tests\\AdoTests.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAgwBMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T11:53:27.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\appsettings.json",
+              "RelativeDocumentMoniker": "Tests\\appsettings.json",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\appsettings.json",
+              "RelativeToolTip": "Tests\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-17T11:54:15.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DI.cs",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DI.cs",
+              "RelativeDocumentMoniker": "Tests\\DI.cs",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DI.cs",
+              "RelativeToolTip": "Tests\\DI.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T11:53:03.561Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
