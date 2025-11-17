@@ -1,7 +1,9 @@
 ﻿
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Tests.DAL;
 
 namespace Tests
 {
@@ -24,9 +26,18 @@ namespace Tests
             {
                 var connectionString = config.GetConnectionString("MaSociete");
                 // Cette construction sera exécutée à chaque demande de service du type SqlConnection
-                return new SqlConnection(config.GetConnectionString("MaSociete"));
+                return new SqlConnection(connectionString);
             });
 
+
+            serviceCollection.AddDbContext<MyContext>(optionsBuilder =>
+            {
+                // optionBuilder => Objet permettant de construire un objet de type DbContextOptions
+                // optionsBuilder.UseInMemoryDatabase("Toto");
+
+                optionsBuilder.UseSqlServer("name=MaSocieteCodeFirst");
+
+            });
 
 
             // ServiceProvider

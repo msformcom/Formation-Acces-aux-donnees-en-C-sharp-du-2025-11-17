@@ -27,7 +27,6 @@ C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
-C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Xml.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -66,7 +65,6 @@ C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\System.Memory.Data.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\System.Security.Cryptography.Xml.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\cs\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\de\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\es\Microsoft.Data.SqlClient.resources.dll
@@ -228,3 +226,9 @@ C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\obj\Debug\net9.0\ref\Tests.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\appsettings.json
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
