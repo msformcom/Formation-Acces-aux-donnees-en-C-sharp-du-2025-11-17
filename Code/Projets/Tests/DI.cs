@@ -3,6 +3,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Tests.DAL;
 
 namespace Tests
@@ -22,6 +23,7 @@ namespace Tests
             var config = configBuilder.Build();
             serviceCollection.AddSingleton<IConfiguration>(config);
 
+            // Transient => Une nouvelle instance par demance
             serviceCollection.AddTransient<SqlConnection>(_ =>
             {
                 var connectionString = config.GetConnectionString("MaSociete");
@@ -29,6 +31,12 @@ namespace Tests
                 return new SqlConnection(connectionString);
             });
 
+            // Configuration du logging
+            serviceCollection.AddLogging(options =>
+            {
+                // Ajour de la fenètre de debbug aux sorties de logging
+                options.AddDebug();
+            });
 
             serviceCollection.AddDbContext<MyContext>(optionsBuilder =>
             {
@@ -36,9 +44,12 @@ namespace Tests
                 // optionsBuilder.UseInMemoryDatabase("Toto");
 
                 optionsBuilder.UseSqlServer("name=MaSocieteCodeFirst");
+                optionsBuilder.UseLazyLoadingProxies();
 
             });
 
+            // Singleton => une seule instance pour toutes les demandes
+            serviceCollection.AddSingleton<ModelOptions<MyContext>>();
 
             // ServiceProvider
             Services = serviceCollection.BuildServiceProvider();

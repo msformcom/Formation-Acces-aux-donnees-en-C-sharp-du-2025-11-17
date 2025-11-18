@@ -12,10 +12,13 @@
           "Microsoft.Data.SqlClient": "6.1.3",
           "Microsoft.EntityFrameworkCore": "9.0.11",
           "Microsoft.EntityFrameworkCore.InMemory": "9.0.11",
+          "Microsoft.EntityFrameworkCore.Proxies": "9.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.11",
           "Microsoft.Extensions.Configuration": "9.0.11",
           "Microsoft.Extensions.Configuration.Json": "9.0.11",
           "Microsoft.Extensions.DependencyInjection": "9.0.11",
+          "Microsoft.Extensions.Logging": "9.0.11",
+          "Microsoft.Extensions.Logging.Debug": "9.0.11",
           "Microsoft.NET.Test.Sdk": "17.12.0",
           "System.Configuration.ConfigurationManager": "9.0.11",
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
@@ -48,6 +51,17 @@
           "lib/net8.0/Azure.Identity.dll": {
             "assemblyVersion": "1.14.2.0",
             "fileVersion": "1.1400.225.36004"
+          }
+        }
+      },
+      "Castle.Core/5.1.1": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "9.0.11"
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.1.1.0"
           }
         }
       },
@@ -212,6 +226,20 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "9.0.11.0",
+            "fileVersion": "9.0.1125.51902"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Proxies/9.0.11": {
+        "dependencies": {
+          "Castle.Core": "5.1.1",
+          "Microsoft.EntityFrameworkCore": "9.0.11",
+          "Microsoft.Extensions.Caching.Memory": "9.0.11",
+          "Microsoft.Extensions.Logging": "9.0.11"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.Proxies.dll": {
             "assemblyVersion": "9.0.11.0",
             "fileVersion": "9.0.1125.51902"
           }
@@ -396,6 +424,19 @@
         },
         "runtime": {
           "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.1125.51716"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Debug/9.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.11",
+          "Microsoft.Extensions.Logging": "9.0.11",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.11"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Debug.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.1125.51716"
           }
@@ -1192,6 +1233,13 @@
       "path": "azure.identity/1.14.2",
       "hashPath": "azure.identity.1.14.2.nupkg.sha512"
     },
+    "Castle.Core/5.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
+      "path": "castle.core/5.1.1",
+      "hashPath": "castle.core.5.1.1.nupkg.sha512"
+    },
     "Microsoft.ApplicationInsights/2.22.0": {
       "type": "package",
       "serviceable": true,
@@ -1261,6 +1309,13 @@
       "sha512": "sha512-0uoF/3xXeUqDw4dJOumUKpBSdIZF/E6nWigwDAjEvodDWp9++6/OvCvMj0aXoctPvTSeG/PwZfDqCIfmKhOqgg==",
       "path": "microsoft.entityframeworkcore.inmemory/9.0.11",
       "hashPath": "microsoft.entityframeworkcore.inmemory.9.0.11.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Proxies/9.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cFD08ICtaBhnVKU4ZKkrDuScHzLjq0cZDcthr93mB422mfIdrIZxGdIYP+M9mlzjkV2naaG0HVeHsrevHOBVHw==",
+      "path": "microsoft.entityframeworkcore.proxies/9.0.11",
+      "hashPath": "microsoft.entityframeworkcore.proxies.9.0.11.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/9.0.11": {
       "type": "package",
@@ -1366,6 +1421,13 @@
       "sha512": "sha512-UKWFTDwtZQIoypyt1YPVsxTnDK+0sKn26+UeSGeNlkRQddrkt9EC6kP4g94rgO/WOZkz94bKNlF1dVZN3QfPFQ==",
       "path": "microsoft.extensions.logging.abstractions/9.0.11",
       "hashPath": "microsoft.extensions.logging.abstractions.9.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Debug/9.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FNjoy1TIpfdSW9Dkqxcnbb4RJXVNAlRVOC7RMGtno8cwPoGnfdlU0Y9ZIvXhqnIk1KbnzU4boXfZx7WutC7Swg==",
+      "path": "microsoft.extensions.logging.debug/9.0.11",
+      "hashPath": "microsoft.extensions.logging.debug.9.0.11.nupkg.sha512"
     },
     "Microsoft.Extensions.Options/9.0.11": {
       "type": "package",

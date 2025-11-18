@@ -7,31 +7,16 @@
       "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|solutionrelative:tests\\entitytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\tests\\dal\\adresse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|solutionrelative:tests\\dal\\adresse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\tests\\dal\\employedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|solutionrelative:tests\\dal\\employedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\tests\\dal\\servicedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|solutionrelative:tests\\dal\\servicedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\tests\\di.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|solutionrelative:tests\\di.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\tests\\dal\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|solutionrelative:tests\\dal\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\tests\\appsettings.json||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|solutionrelative:tests\\appsettings.json||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\tests\\adotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2129A3AB-DC3C-F26A-5D24-037F9D5937E6}|Tests\\Tests.csproj|solutionrelative:tests\\adotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MaSociete/True/SqlTable/dbo.TBL_Employes.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,58 +26,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EmployeDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DAL\\EmployeDAO.cs",
-              "RelativeDocumentMoniker": "Tests\\DAL\\EmployeDAO.cs",
-              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DAL\\EmployeDAO.cs",
-              "RelativeToolTip": "Tests\\DAL\\EmployeDAO.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
+              "Title": "Adresse.cs",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DAL\\Adresse.cs",
+              "RelativeDocumentMoniker": "Tests\\DAL\\Adresse.cs",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DAL\\Adresse.cs",
+              "RelativeToolTip": "Tests\\DAL\\Adresse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T16:03:18.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\appsettings.json",
-              "RelativeDocumentMoniker": "Tests\\appsettings.json",
-              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\appsettings.json",
-              "RelativeToolTip": "Tests\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-17T15:59:38.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MyContext.cs",
-              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DAL\\MyContext.cs",
-              "RelativeDocumentMoniker": "Tests\\DAL\\MyContext.cs",
-              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DAL\\MyContext.cs",
-              "RelativeToolTip": "Tests\\DAL\\MyContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T15:28:20.783Z",
+              "WhenOpened": "2025-11-18T15:27:39.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "EmployeDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DAL\\EmployeDAO.cs",
+              "RelativeDocumentMoniker": "Tests\\DAL\\EmployeDAO.cs",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DAL\\EmployeDAO.cs",
+              "RelativeToolTip": "Tests\\DAL\\EmployeDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T15:27:29.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ServiceDAO.cs",
               "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DAL\\ServiceDAO.cs",
               "RelativeDocumentMoniker": "Tests\\DAL\\ServiceDAO.cs",
               "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DAL\\ServiceDAO.cs",
               "RelativeToolTip": "Tests\\DAL\\ServiceDAO.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T14:45:15.118Z",
+              "WhenOpened": "2025-11-18T15:27:19.132Z",
               "EditorCaption": ""
             },
             {
@@ -101,47 +73,11 @@
               "Title": "EntityTests.cs",
               "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\EntityTests.cs",
               "RelativeDocumentMoniker": "Tests\\EntityTests.cs",
-              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\EntityTests.cs*",
-              "RelativeToolTip": "Tests\\EntityTests.cs*",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAAApAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\EntityTests.cs",
+              "RelativeToolTip": "Tests\\EntityTests.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T14:43:23.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "dbo.TBL_Employes [Donn\u00E9es]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MaSociete/True/SqlTable/dbo.TBL_Employes.sql",
-              "ToolTip": "dbo.TBL_Employes [Donn\u00E9es]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-11-17T12:53:56.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AdoTests.cs",
-              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\AdoTests.cs",
-              "RelativeDocumentMoniker": "Tests\\AdoTests.cs",
-              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\AdoTests.cs",
-              "RelativeToolTip": "Tests\\AdoTests.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAmwEwAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T11:53:27.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DI.cs",
-              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DI.cs",
-              "RelativeDocumentMoniker": "Tests\\DI.cs",
-              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\Tests\\DI.cs",
-              "RelativeToolTip": "Tests\\DI.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T11:53:03.561Z",
+              "WhenOpened": "2025-11-18T15:26:45.429Z",
               "EditorCaption": ""
             }
           ]

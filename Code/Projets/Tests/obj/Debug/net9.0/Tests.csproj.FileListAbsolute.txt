@@ -232,3 +232,6 @@ C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Castle.Core.dll
+C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Proxies.dll
