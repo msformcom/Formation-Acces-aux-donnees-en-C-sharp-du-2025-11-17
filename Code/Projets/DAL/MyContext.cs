@@ -108,6 +108,8 @@ namespace MaSocieteDAL
                 options.ToTable(tableName);
 
                 options.HasKey(c => c.Id).IsClustered(false);
+
+        
                 options.Property(c => c.Id).HasColumnName(modelOptions.GetPrimaryKeyName(nameof(EmployeDAO)));
 
                 options.Property(c => c.Code).HasMaxLength(5).IsUnicode(false).IsFixedLength(true);
@@ -130,6 +132,8 @@ namespace MaSocieteDAL
                 // SELECT DateEntree,Id, Nom, Prenom FROM Employes Optimisé car index couvrant
                 // SELECT DateEntree,Id, Nom, Prenom, Code  FROM Employes  Pas optimisé
                 options.HasIndex(c => c.DateEntree).IncludeProperties(c => new { c.Nom, c.Prenom });
+
+                options.HasIndex(c => c.Code).IsUnique(true);
 
                 options.OwnsOne(c => c.Adresse, options => {
                     options.Property(c => c.CP).HasColumnName("CodePostal");

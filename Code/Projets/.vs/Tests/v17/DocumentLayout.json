@@ -7,12 +7,32 @@
       "RelativeMoniker": "D:0:0:{4466C3AA-273F-21C7-A5A6-C12B47997C34}|MonWebApi\\MonWebApi.csproj|solutionrelative:monwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9829404-CE2E-47D5-A835-098B9016E5E9}|DAL\\DAL.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\dal\\modeloptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9829404-CE2E-47D5-A835-098B9016E5E9}|DAL\\DAL.csproj|solutionrelative:dal\\modeloptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9829404-CE2E-47D5-A835-098B9016E5E9}|DAL\\DAL.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\dal\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9829404-CE2E-47D5-A835-098B9016E5E9}|DAL\\DAL.csproj|solutionrelative:dal\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4466C3AA-273F-21C7-A5A6-C12B47997C34}|MonWebApi\\MonWebApi.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\monwebapi\\dto\\employedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4466C3AA-273F-21C7-A5A6-C12B47997C34}|MonWebApi\\MonWebApi.csproj|solutionrelative:monwebapi\\dto\\employedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9829404-CE2E-47D5-A835-098B9016E5E9}|DAL\\DAL.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\dal\\employedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9829404-CE2E-47D5-A835-098B9016E5E9}|DAL\\DAL.csproj|solutionrelative:dal\\employedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4466C3AA-273F-21C7-A5A6-C12B47997C34}|MonWebApi\\MonWebApi.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\monwebapi\\dto\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4466C3AA-273F-21C7-A5A6-C12B47997C34}|MonWebApi\\MonWebApi.csproj|solutionrelative:monwebapi\\dto\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4466C3AA-273F-21C7-A5A6-C12B47997C34}|MonWebApi\\MonWebApi.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\monwebapi\\dto\\adressedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4466C3AA-273F-21C7-A5A6-C12B47997C34}|MonWebApi\\MonWebApi.csproj|solutionrelative:monwebapi\\dto\\adressedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4466C3AA-273F-21C7-A5A6-C12B47997C34}|MonWebApi\\MonWebApi.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\monwebapi\\monwebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4466C3AA-273F-21C7-A5A6-C12B47997C34}|MonWebApi\\MonWebApi.csproj|solutionrelative:monwebapi\\monwebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9829404-CE2E-47D5-A835-098B9016E5E9}|DAL\\DAL.csproj|c:\\users\\dom\\desktop\\formation acces aux donn\u00E9es c#\\formation acces aux donnees en c sharp du 2025-11-17\\code\\projets\\dal\\modeloptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9829404-CE2E-47D5-A835-098B9016E5E9}|DAL\\DAL.csproj|solutionrelative:dal\\modeloptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +42,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "EmployeDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\DAL\\EmployeDAO.cs",
+              "RelativeDocumentMoniker": "DAL\\EmployeDAO.cs",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\DAL\\EmployeDAO.cs",
+              "RelativeToolTip": "DAL\\EmployeDAO.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T16:20:16.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\MonWebApi\\DTO\\ServiceDTO.cs",
+              "RelativeDocumentMoniker": "MonWebApi\\DTO\\ServiceDTO.cs",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\MonWebApi\\DTO\\ServiceDTO.cs",
+              "RelativeToolTip": "MonWebApi\\DTO\\ServiceDTO.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T15:42:00.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdresseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\MonWebApi\\DTO\\AdresseDTO.cs",
+              "RelativeDocumentMoniker": "MonWebApi\\DTO\\AdresseDTO.cs",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\MonWebApi\\DTO\\AdresseDTO.cs",
+              "RelativeToolTip": "MonWebApi\\DTO\\AdresseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T14:01:55.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\MonWebApi\\DTO\\EmployeDTO.cs",
+              "RelativeDocumentMoniker": "MonWebApi\\DTO\\EmployeDTO.cs",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\MonWebApi\\DTO\\EmployeDTO.cs",
+              "RelativeToolTip": "MonWebApi\\DTO\\EmployeDTO.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T13:47:22.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MonWebApi",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\MonWebApi\\MonWebApi.csproj",
+              "RelativeDocumentMoniker": "MonWebApi\\MonWebApi.csproj",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\MonWebApi\\MonWebApi.csproj",
+              "RelativeToolTip": "MonWebApi\\MonWebApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-19T12:40:57.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ModelOptions.cs",
               "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\DAL\\ModelOptions.cs",
               "RelativeDocumentMoniker": "DAL\\ModelOptions.cs",
@@ -39,13 +124,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MyContext.cs",
               "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\DAL\\MyContext.cs",
               "RelativeDocumentMoniker": "DAL\\MyContext.cs",
               "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\DAL\\MyContext.cs",
               "RelativeToolTip": "DAL\\MyContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAwwKoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T11:16:56.854Z",
               "EditorCaption": ""
@@ -58,7 +143,7 @@
               "RelativeDocumentMoniker": "MonWebApi\\Program.cs",
               "ToolTip": "C:\\Users\\Dom\\Desktop\\Formation Acces aux donn\u00E9es C#\\Formation Acces aux donnees en C sharp du 2025-11-17\\Code\\Projets\\MonWebApi\\Program.cs",
               "RelativeToolTip": "MonWebApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAowJEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T11:15:38.766Z",
               "EditorCaption": ""

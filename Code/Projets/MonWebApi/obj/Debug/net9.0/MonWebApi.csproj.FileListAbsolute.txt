@@ -176,3 +176,4 @@ C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\MonWebApi\obj\Debug\net9.0\MonWebApi.pdb
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\MonWebApi\obj\Debug\net9.0\MonWebApi.genruntimeconfig.cache
 C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\MonWebApi\obj\Debug\net9.0\ref\MonWebApi.dll
+C:\Users\Dom\Desktop\Formation Acces aux données C#\Formation Acces aux donnees en C sharp du 2025-11-17\Code\Projets\MonWebApi\bin\Debug\net9.0\AutoMapper.dll
