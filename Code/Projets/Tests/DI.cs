@@ -44,7 +44,7 @@ namespace Tests
                 // optionsBuilder.UseInMemoryDatabase("Toto");
 
                 optionsBuilder.UseSqlServer("name=MaSocieteCodeFirst");
-                optionsBuilder.UseLazyLoadingProxies();
+                //optionsBuilder.UseLazyLoadingProxies();
 
             });
 

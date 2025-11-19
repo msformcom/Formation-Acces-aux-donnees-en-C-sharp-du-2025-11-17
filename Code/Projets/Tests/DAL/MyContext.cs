@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -23,12 +24,60 @@ namespace Tests.DAL
             
         }
 
+        // Exécution d'une procédure stockée / vue / query adhoc avec retour des resultats
+        public IQueryable<ShortBulletin> GetBulletins(Guid EmployeId)
+        {
+            return this.Database.SqlQuery<ShortBulletin>($"SELECT montant,date FROM TBL_Bulletins WHERE FK_Employe={EmployeId}");
+        }
+
+
+        public void DeleteBulletin(Guid id)
+        {
+            this.Database.ExecuteSqlRaw("EXEC DeleteBulletin @id", new SqlParameter("@id", id));
+        }
+
         public DbSet<EmployeDAO> Employes { get; set; }
         public DbSet<ServiceDAO> Services { get; set; }
+        public DbSet<BulletinDAO> Bulletins { get; set; }
 
         // Fonction du contexte permettant de préciser la structuire de la BDD
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            modelBuilder.Entity<BulletinDAO>(options =>
+            {
+                var tableName = this.modelOptions.GetTableName(nameof(BulletinDAO));
+                options.ToTable(tableName);
+
+                options.HasKey(c => c.Id).IsClustered(false);
+                options.Property(c => c.Id)
+                    .HasColumnName(modelOptions.GetPrimaryKeyName(nameof(BulletinDAO)));
+
+                // Optimisation des recherches de bulletin par employé
+                options.HasIndex(c => c.EmployeId).IsClustered(true);
+
+                // Pour la compta : index qui est couvrant sur Id,Date,Montant,Verse
+                options.HasIndex(c=>c.Date).IsClustered(false).IncludeProperties(c=>new {c.Montant,c.Verse});
+
+                options.Property(c => c.EmployeId).HasColumnName("FK_Employe");
+
+                options.HasOne(c => c.Employe).WithMany(c => c.Bulletins).HasForeignKey(c => c.EmployeId).OnDelete(DeleteBehavior.Cascade);
+
+                // Indication : Utiliser la procédure stockée DeleteBulletion pour supprimer des bulletins
+                // => à la place du code SQL normalement généré
+                options.DeleteUsingStoredProcedure("DeleteBulletin", options => {
+                    
+                    options.HasOriginalValueParameter(c=>c.Id);
+               });
+                // Pour éxécuter un PS en cas de Update d'une entité
+                //options.UpdateUsingStoredProcedure("UpdateBulletin", options => {
+                //    // Paramètre de la procédure recevant la nouvelle valeur d'un propriété
+                //    //options.HasParameter(c => c.Id);
+                //    // Paramètre de la procédure recevant l'ancienne valeur d'un propriété
+                //    //options.HasOriginalValueParameter(c => c.Id);
+                //});
+
+            });
 
             modelBuilder.Entity<ServiceDAO>(options =>
             {

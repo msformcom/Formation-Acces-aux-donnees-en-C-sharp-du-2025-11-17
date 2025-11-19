@@ -39,5 +39,7 @@ namespace Tests.DAL
 
         // Un employé peut être le chef de plusieurs Service (1 à N)
         public virtual ICollection<ServiceDAO> ServicesSubordonnes { get; set; } = new HashSet<ServiceDAO>();
+
+        public virtual ICollection<BulletinDAO> Bulletins { get; set; } = new HashSet<BulletinDAO>();
     }
 }

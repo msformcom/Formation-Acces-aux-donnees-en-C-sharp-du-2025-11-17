@@ -1,0 +1,111 @@
+
+
+Trace du débogage :
+Microsoft.EntityFrameworkCore.Model.Validation: Warning: The entity type 'Adresse' is an optional dependent using table sharing without any required non shared property that could be used to identify whether the entity exists. If all nullable properties contain a null value in database then an object instance won't be created in the query. Add a required property to create instances with null values for other properties or mark the incoming navigation as required to always create an instance.
+Microsoft.EntityFrameworkCore.Model.Validation: Warning: No store type was specified for the decimal property 'Montant' on entity type 'BulletinDAO'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+Microsoft.EntityFrameworkCore.Model.Validation: Warning: No store type was specified for the decimal property 'Salaire' on entity type 'EmployeDAO'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (3,020ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [MaSocieteCF] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [MaSocieteCF];
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (206ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [MaSocieteCF];
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [MaSocieteCF] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [TBL_Employes] (
+    [PK_Employe] uniqueidentifier NOT NULL,
+    [Code] char(5) NOT NULL,
+    [Nom] nvarchar(50) NOT NULL,
+    [Prenom] nvarchar(50) NOT NULL,
+    [Ligne] nvarchar(max) NULL,
+    [CodePostal] nvarchar(max) NULL,
+    [Ville] nvarchar(max) NULL,
+    [DateEntree] date NOT NULL,
+    [DateSortie] date NULL,
+    [Salaire] decimal(18,2) NOT NULL,
+    CONSTRAINT [PK_TBL_Employes] PRIMARY KEY NONCLUSTERED ([PK_Employe])
+);
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [TBL_Bulletins] (
+    [PK_Bulletin] uniqueidentifier NOT NULL,
+    [Montant] decimal(18,2) NOT NULL,
+    [Date] date NOT NULL,
+    [Verse] bit NOT NULL,
+    [FK_Employe] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_TBL_Bulletins] PRIMARY KEY NONCLUSTERED ([PK_Bulletin]),
+    CONSTRAINT [FK_TBL_Bulletins_TBL_Employes_FK_Employe] FOREIGN KEY ([FK_Employe]) REFERENCES [TBL_Employes] ([PK_Employe]) ON DELETE CASCADE
+);
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [TBL_Services] (
+    [PK_Service] int NOT NULL IDENTITY,
+    [Libele] nvarchar(100) COLLATE FRENCH_CI_AI NOT NULL,
+    [FK_ChefService] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_TBL_Services] PRIMARY KEY NONCLUSTERED ([PK_Service]),
+    CONSTRAINT [FK_TBL_Services_TBL_Employes_FK_ChefService] FOREIGN KEY ([FK_ChefService]) REFERENCES [TBL_Employes] ([PK_Employe]) ON DELETE NO ACTION
+);
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [EmployeDAOServiceDAO] (
+    [EmployesId] uniqueidentifier NOT NULL,
+    [ServicesId] int NOT NULL,
+    CONSTRAINT [PK_EmployeDAOServiceDAO] PRIMARY KEY ([EmployesId], [ServicesId]),
+    CONSTRAINT [FK_EmployeDAOServiceDAO_TBL_Employes_EmployesId] FOREIGN KEY ([EmployesId]) REFERENCES [TBL_Employes] ([PK_Employe]) ON DELETE CASCADE,
+    CONSTRAINT [FK_EmployeDAOServiceDAO_TBL_Services_ServicesId] FOREIGN KEY ([ServicesId]) REFERENCES [TBL_Services] ([PK_Service]) ON DELETE CASCADE
+);
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'PK_Employe', N'Code', N'DateEntree', N'DateSortie', N'Nom', N'Prenom', N'Salaire') AND [object_id] = OBJECT_ID(N'[TBL_Employes]'))
+    SET IDENTITY_INSERT [TBL_Employes] ON;
+INSERT INTO [TBL_Employes] ([PK_Employe], [Code], [DateEntree], [DateSortie], [Nom], [Prenom], [Salaire])
+VALUES ('2ce8fd3b-c50c-4328-8869-47fc52a66931', 'Emp1', '2025-10-19', NULL, N'Nom1', N'Prenom1', 1000.0),
+('46e55d24-b0af-4a79-81ba-c57cc813f310', 'Emp7', '2025-10-19', NULL, N'Nom7', N'Prenom7', 7000.0),
+('6af376e4-fb0f-41f6-9c5d-bf928e918286', 'Emp6', '2025-10-19', NULL, N'Nom6', N'Prenom6', 6000.0),
+('6f325323-d89c-4402-97f7-ddb32b074bbb', 'Emp10', '2025-10-19', NULL, N'Nom10', N'Prenom10', 10000.0),
+('7ff8860d-9995-4d10-9e88-c0456bf066d0', 'Emp9', '2025-10-19', NULL, N'Nom9', N'Prenom9', 9000.0),
+('84ce208d-fbde-44e7-bdbd-e4ed1fdbb0b2', 'Emp3', '2025-10-19', NULL, N'Nom3', N'Prenom3', 3000.0),
+('8887727b-e49c-4e9f-a3db-82b88bacab8b', 'Emp5', '2025-10-19', NULL, N'Nom5', N'Prenom5', 5000.0),
+('9fa1f1ff-5044-4e98-b1b0-b66d508db9b2', 'Emp2', '2025-10-19', NULL, N'Nom2', N'Prenom2', 2000.0),
+('d4aa193e-df18-4f70-a218-bb882ae559d7', 'Emp4', '2025-10-19', NULL, N'Nom4', N'Prenom4', 4000.0),
+('f4e50963-9398-40aa-83d0-bf8437a89d0f', 'Emp8', '2025-10-19', NULL, N'Nom8', N'Prenom8', 8000.0);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'PK_Employe', N'Code', N'DateEntree', N'DateSortie', N'Nom', N'Prenom', N'Salaire') AND [object_id] = OBJECT_ID(N'[TBL_Employes]'))
+    SET IDENTITY_INSERT [TBL_Employes] OFF;
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'PK_Service', N'FK_ChefService', N'Libele') AND [object_id] = OBJECT_ID(N'[TBL_Services]'))
+    SET IDENTITY_INSERT [TBL_Services] ON;
+INSERT INTO [TBL_Services] ([PK_Service], [FK_ChefService], [Libele])
+VALUES (1, '9fa1f1ff-5044-4e98-b1b0-b66d508db9b2', N'Service1'),
+(2, '84ce208d-fbde-44e7-bdbd-e4ed1fdbb0b2', N'Service2'),
+(3, 'd4aa193e-df18-4f70-a218-bb882ae559d7', N'Service3'),
+(4, '8887727b-e49c-4e9f-a3db-82b88bacab8b', N'Service4');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'PK_Service', N'FK_ChefService', N'Libele') AND [object_id] = OBJECT_ID(N'[TBL_Services]'))
+    SET IDENTITY_INSERT [TBL_Services] OFF;
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_EmployeDAOServiceDAO_ServicesId] ON [EmployeDAOServiceDAO] ([ServicesId]);
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE NONCLUSTERED INDEX [IX_TBL_Bulletins_Date] ON [TBL_Bulletins] ([Date]) INCLUDE ([Montant], [Verse]);
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE CLUSTERED INDEX [IX_TBL_Bulletins_FK_Employe] ON [TBL_Bulletins] ([FK_Employe]);
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_TBL_Employes_DateEntree] ON [TBL_Employes] ([DateEntree]) INCLUDE ([Nom], [Prenom]);
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_TBL_Services_FK_ChefService] ON [TBL_Services] ([FK_ChefService]);
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_TBL_Services_Libele] ON [TBL_Services] ([Libele]);
+Microsoft.EntityFrameworkCore.Query: Warning: The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[PK_Employe], [t].[Code], [t].[DateEntree], [t].[DateSortie], [t].[Nom], [t].[Prenom], [t].[Salaire], [t].[CodePostal], [t].[Ligne], [t].[Ville]
+FROM [TBL_Employes] AS [t]
+Microsoft.EntityFrameworkCore.Database.Command: Information: Executed DbCommand (28ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (DbType = Guid), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TBL_Bulletins] ([PK_Bulletin], [Date], [FK_Employe], [Montant], [Verse])
+VALUES (@p0, @p1, @p2, @p3, @p4);

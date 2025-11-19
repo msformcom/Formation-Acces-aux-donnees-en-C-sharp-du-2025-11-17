@@ -9,6 +9,61 @@ namespace Tests;
 [TestClass]
 public class EntityTests
 {
+    [TestMethod]
+    public void BulletinTest()
+    {
+        using (var ctx = DI.Services.GetRequiredService<MyContext>())
+        {
+            // Insertion de bulletin
+            ctx.Database.EnsureDeleted();
+            ctx.Database.EnsureCreated();
+            var employe = ctx.Employes.First();
+            var bulletin = new BulletinDAO()
+            {
+                Employe = employe,
+                Montant = employe.Salaire,
+                Verse = false
+            };
+            ctx.Bulletins.Add(bulletin);
+            var tracked = ctx.ChangeTracker.Entries().ToList();
+            ctx.SaveChanges();
+
+            // Charger les bulltins de l'mployé à partir de la BDD
+            ctx.Entry(employe).Collection(c => c.Bulletins).Load();
+            var bulletins = employe.Bulletins;
+
+            Assert.AreEqual(bulletins.Count(), 1);
+
+            // Creation d'une procédure stockée
+            ctx.Database.ExecuteSqlRaw("CREATE OR ALTER PROCEDURE DeleteBulletin (\r\n@PK_Bulletin UNIQUEIDENTIFIER\r\n) AS \r\nBEGIN\r\n\tIF EXISTS(SELECT * FROM TBL_Bulletins\t\r\n\t\tWHERE PK_Bulletin=@PK_Bulletin AND Verse=0)\r\n\t\tBEGIN\r\n\t\t\tDELETE FROM TBL_Bulletins WHERE PK_Bulletin=@PK_Bulletin\r\n\t\tEND\r\n\t\tELSE\r\n\t\tBEGIN\r\n\t\t\t;THROW 51000,'Suppression impossible',1\r\n\t\tEND \r\n\r\nEND");
+
+            var bulletinsDeEmploye = ctx.GetBulletins(employe.Id).OrderBy(c=>c.Montant).ToArray();
+            // Execution de la procédure stockée par l'intermédiaire d'une fonction définié sur le contexte
+            // ctx.DeleteBulletin(bulletin.Id);
+            bulletinsDeEmploye = ctx.GetBulletins(employe.Id).ToArray();
+            ctx.Bulletins.Remove(bulletin);
+            ctx.SaveChanges();
+
+            // Ici, le context ne sait pas que le bulletin a été suppression
+
+            bulletinsDeEmploye = ctx.GetBulletins(employe.Id).ToArray();
+
+
+
+
+            // Suppression de  bulletin
+            //var bulletinASupprimer=ctx.Bulletins.First();
+            //ctx.Bulletins.Remove(bulletinASupprimer);
+            //ctx.SaveChanges();
+
+
+
+
+
+        }
+        
+
+    }
 
     [TestMethod]
     public void LectureProprieteDeNavigation()
