@@ -1,15 +1,21 @@
 
+using System.ComponentModel.DataAnnotations.Schema;
 using AutoMapper;
 using MaSocieteDAL;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OData.ModelBuilder;
 using MonWebApi.DTO;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
+#region Mise en place des services
+
 // Builder.Services => ServiceCollection déjà en place dans le WebApplicationBuider
 // Avce Configuration et Logging
-
 
 builder.Services.AddAutoMapper(config =>
 {
@@ -32,12 +38,41 @@ builder.Services.AddAutoMapper(config =>
         .ForMember(c => c.OutDate, o => o.MapFrom(c => c.DateSortie))
         .ForMember(c => c.EntryDate, o => o.MapFrom(c => c.DateEntree))
         .ForMember(c => c.Adress, o => o.MapFrom(c => c.Adresse))
+         .ForMember(c => c.Salaire, o => o.MapFrom(c=>c.Bonus))
+         .ForMember(c=>c.Services,o=>o.MapFrom(c=>c.Services))
         // Créer un EmployeDAO à partir d'un EmployeDTO
-        .ReverseMap();
+        .ReverseMap()
+        .ForMember(c => c.Bonus, o => o.MapFrom(c => c.Salaire));
+       
 });
 
+#region OData
+var oDataBuilder = new ODataConventionModelBuilder();
+// Ajout du controleur Employee
+oDataBuilder.EntitySet<EmployeDTO>("Employee");
 
-// Ajoout du context au services
+
+#endregion
+
+
+
+// Permet au middleware de routage des controllers d'instancier les controllers
+builder.Services.AddControllers()
+    .AddOData(options =>
+    {
+        // Routes avec /odata/Employee
+        options.AddRouteComponents("odata", oDataBuilder.GetEdmModel())
+            .Filter()
+            .OrderBy()
+            .Select()
+            .Expand()
+            .Count()
+            .SetMaxTop(20)
+            .EnableQueryFeatures();
+
+    });
+
+// Ajoout du MyContext au services (en tant que scoped)
 builder.Services.AddDbContext<MyContext>(optionsBuilder =>
 {
     // optionBuilder => Objet permettant de construire un objet de type DbContextOptions
@@ -54,26 +89,107 @@ builder.Services.AddSingleton<ModelOptions<MyContext>>();
 
 // Ajout de la fenètre de Debug au Logging
 builder.Logging.AddDebug();
+#endregion
 
+
+// Construction de l'application
 var app = builder.Build();
 
-// Ajout de Middleware de journalisation
-// La fonction MiddleWare recoit : 
-// 1) le Contexte de la requète à traiter
-// 2) un fonction asynchrone qui appelle le middleware suivant
-app.Use(async (HttpContext context, Func<Task> next) =>
-{
+#region Création de la BDD (si pas déjà fait)
 
-    var dateEntree = DateTime.Now;
-    var message = $"Requète entrante vers: {context.Request.Path} at {dateEntree:hh:mm:ss}";
-    app.Logger.Log(LogLevel.Information, message);
-    // Passage de la requète au middleware suivant
-    await next();
-    // Après le traietement par les middleware suivants
-    var duration = (DateTime.Now - dateEntree).TotalMicroseconds;
-    message = $"Requète traitée vers: {context.Request.Path} en {duration} ms";
-    app.Logger.Log(LogLevel.Information, message);
-});
+// Il me faut une instance de context => ensureCreated
+using (var scope=app.Services.CreateScope())
+{
+    // Dans le cadre d'une appli web, un scope est créé pour chaque requete
+    // Les dépendances peuvent être enregistrée sous 3 formes
+    // Singleton => 1 seule instance quel que soit le scope
+    // Transient => 1 nouvelle instance à chaque demande indépendamment du scope
+    // Scoped => Une instance par scope
+    // 1 requete => 1 scope crée => si on demande un MyContext => 1 seul pour toutes les demandes pour cette requete
+    // je demande une instance de MyContext
+    //app.Services.GetService<MyContext>();//=> new marche pas car il faut un scope
+    using (var ctx = scope.ServiceProvider.GetRequiredService<MyContext>())
+    {
+       
+        if (ctx.Database.EnsureCreated())
+        {
+            // La base vient juste d'être crée
+            // Je vais mettre les données initiale
+
+            // Seed => Mettre des données initiales à la création
+
+            // Création de 10 employés
+            var employes = Enumerable.Range(1, 99)
+                    .Select(c => new EmployeDAO()
+                    {
+                        Nom = "Nom" + c,
+                        Prenom = "Prenom" + c,
+                        Code = "Emp" + c,
+                        Bonus = c * 1000,
+                        DateEntree = new DateOnly(2025, 10, 19)
+                    }).ToArray();
+
+            ctx.Employes.AddRange(employes);
+
+            ctx.SaveChanges();
+
+
+            var services = Enumerable.Range(1, 10)
+                    .Select(c => new ServiceDAO()
+                    {
+                
+                        Libele = "Service" + c,
+                        ChefServiceId = employes[c].Id
+                    }).ToArray();
+
+            ctx.Services.AddRange(services);
+
+            ctx.SaveChanges();
+
+            var r = new Random();
+            foreach(var s in services)
+            {
+
+                foreach (var e in Enumerable.Range(1, 20).Select(c => r.Next(0, 99)).Distinct().Select(c => employes[c]))
+                {
+                    s.Employes.Add(e);
+                }
+            }
+
+        
+
+            ctx.SaveChanges();
+
+
+        }
+    }
+    ;
+
+}
+
+
+    #endregion
+
+    #region Mise en place des middlewares
+
+
+    // Ajout de Middleware de journalisation
+    // La fonction MiddleWare recoit : 
+    // 1) le Contexte de la requète à traiter
+    // 2) un fonction asynchrone qui appelle le middleware suivant
+    app.Use(async (HttpContext context, Func<Task> next) =>
+    {
+
+        var dateEntree = DateTime.Now;
+        var message = $"Requète entrante vers: {context.Request.Path} at {dateEntree:hh:mm:ss}";
+        app.Logger.Log(LogLevel.Information, message);
+        // Passage de la requète au middleware suivant
+        await next();
+        // Après le traietement par les middleware suivants
+        var duration = (DateTime.Now - dateEntree).TotalMicroseconds;
+        message = $"Requète traitée vers: {context.Request.Path} en {duration} ms";
+        app.Logger.Log(LogLevel.Information, message);
+    });
 
 
 //app.Use(async (HttpContext context, Func<Task> next) =>
@@ -146,5 +262,13 @@ app.MapGet("/Employes/{code}/Services", async (
     await context.Response.WriteAsJsonAsync(services);
 });
 
+
+app.MapControllers();
+
+
+#endregion
+
+
+// Démarrage de l'application
 app.Run();
 

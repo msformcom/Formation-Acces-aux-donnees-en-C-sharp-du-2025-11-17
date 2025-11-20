@@ -97,10 +97,27 @@ namespace MaSocieteDAL
                             .OnDelete(DeleteBehavior.Restrict);
                 options.Property(c => c.ChefServiceId).HasColumnName("FK_ChefService");
 
+
+
                 // Relation de N à N entre Services et les Employe
-                options.HasMany(c => c.Employes).WithMany(c => c.Services);
+                options .HasMany(c => c.Employes)
+                        .WithMany(c => c.Services)
+
+                        .UsingEntity<Dictionary<int, Guid>>("TBL_Affectations",
+                            j => j.HasOne<EmployeDAO>().WithMany().HasForeignKey("EmployeId"),
+                            i => i.HasOne<ServiceDAO>().WithMany().HasForeignKey("ServiceId"),
+                            t => t.ToTable("TBL_Affectations")
+                            );
 
             });
+
+            //modelBuilder.Entity<AffectationDAO>(options =>
+            //{
+            //    //options.ToTable("TBL_Affectations");
+            //    options.HasKey(c => new { c.ServiceId, c.EmployeId });
+            //    options.Property(c => c.ServiceId).ValueGeneratedNever();
+            //    options.Property(c => c.EmployeId).ValueGeneratedNever();
+            //});
      
             modelBuilder.Entity<EmployeDAO>(options =>
             {
@@ -120,7 +137,7 @@ namespace MaSocieteDAL
 
                 // ConcurrencyToken => Permet de ne pas écraser cette donnée
                 // si une mise à jour concurrente a eu lieu
-                options.Property(c => c.Salaire).IsConcurrencyToken(true);
+                options.Property(c => c.Bonus).IsConcurrencyToken(true);
 
                 options.Property(c => c.DateSortie).IsRequired(true);
 
@@ -143,50 +160,8 @@ namespace MaSocieteDAL
 
             });
 
-            // Seed => Mettre des données initiales à la création
+          
 
-            // Création de 10 employés
-            var employes = Enumerable.Range(1, 10)
-                    .Select(c => new EmployeDAO()
-                    {
-                        Nom = "Nom" + c,
-                        Prenom = "Prenom" + c,
-                        Code = "Emp" + c,
-                        Salaire = c * 1000,
-                        DateEntree = new DateOnly(2025,10,19)
-                    }).ToArray();
-        
-
-            var services = Enumerable.Range(1, 4)
-                    .Select(c => new ServiceDAO()
-                    {
-                        Id=c,
-                        Libele = "Service" + c,
-                        ChefServiceId = employes[c].Id
-                    }).ToArray();
-
-            //foreach(var e in employes.Skip(2).Take(4))
-            //{
-            //    services[0].Employes.Add(e);
-            //}
-
-            //foreach (var e in employes.Take(4))
-            //{
-            //    services[1].Employes.Add(e);
-            //}
-            //foreach (var e in employes.TakeLast(6))
-            //{
-            //    services[2].Employes.Add(e);
-            //}
-
-            //foreach (var e in employes.Skip(4).Take(3))
-            //{
-            //    services[3].Employes.Add(e);
-            //}
-
-
-            modelBuilder.Entity<EmployeDAO>().HasData(employes);
-            modelBuilder.Entity<ServiceDAO>().HasData(services);
 
         }
 

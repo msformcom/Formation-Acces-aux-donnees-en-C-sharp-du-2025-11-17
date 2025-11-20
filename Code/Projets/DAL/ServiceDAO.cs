@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MaSocieteDAL
 {
     // But de cette classe => définir la structure d'une donnée extraites 
@@ -28,6 +29,8 @@ namespace MaSocieteDAL
         // ICollection est IEnumerabme
         // ICollection => add,remove, clear
         public virtual ICollection<EmployeDAO> Employes { get; set; } =new HashSet<EmployeDAO>();
+
+        //public virtual ICollection<AffectationDAO> Affectations { get; set; } = new HashSet<AffectationDAO>();
 
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MaSocieteDAL
 {
     [Table("TBLEmployes")]
@@ -29,7 +30,9 @@ namespace MaSocieteDAL
         public DateOnly DateEntree { get; set; }
         public DateOnly? DateSortie { get; set; }
 
-        public Decimal Salaire { get; set; }
+        public Decimal Bonus { get; set; }
+
+        public Byte[]? Photo { get; set; }
 
 
 
@@ -41,5 +44,7 @@ namespace MaSocieteDAL
         public virtual ICollection<ServiceDAO> ServicesSubordonnes { get; set; } = new HashSet<ServiceDAO>();
 
         public virtual ICollection<BulletinDAO> Bulletins { get; set; } = new HashSet<BulletinDAO>();
+
+        //public virtual ICollection<AffectationDAO> Affectations { get; set; } = new HashSet<AffectationDAO>();
     }
 }

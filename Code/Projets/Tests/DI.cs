@@ -51,6 +51,13 @@ namespace Tests
             // Singleton => une seule instance pour toutes les demandes
             serviceCollection.AddSingleton<ModelOptions<MyContext>>();
 
+            serviceCollection.AddTransient<HttpClient>(s =>
+            {
+                var httpClient = new HttpClient();
+                httpClient.BaseAddress = new Uri( s.GetService<IConfiguration>().GetSection("Services:MaSociete").Value);
+                return httpClient;
+            });
+
             // ServiceProvider
             Services = serviceCollection.BuildServiceProvider();
             
